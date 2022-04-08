@@ -11,10 +11,32 @@
     <link rel="stylesheet" href="assets/style.css" />
     <title>Weather Dashboard</title>
   </head>
-  <body>
-    <header>Weather Dashboard</header>
-    <section>Search for a City:</section>
-    <section></section>
+
+  <body class="flex-column min-100-vh">
+    <header class="hero">Weather Dashboard</header>
+    <h2 id="current-time"></h2>
+
+    <main class="flex-row justify-space-between">
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <h3 class="card-header">Search for a City</h3>
+          <form id="search-form" class="card-body">
+            <label class="form-label" for="city">City:</label>
+            <input id="city" class="form-input" type="text" name="username" placeholder="City"/>
+            <button id="search" type="submit" class="btn">Submit</button>
+          </form>
+        </div>
+
+        <div class="col-8 float-right">
+          <div id="weather-container" class="card">
+          </div>
+        </div>
+      </main>
+      
+      <div id="forecast" class="row"></div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/script.js"></script>
   </body>
 </html>
